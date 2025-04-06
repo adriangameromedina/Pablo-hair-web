@@ -67,6 +67,7 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				medical: {
+					50: '#f0fafd',  // Adding the missing medical-50 color
 					100: '#e6f7fb',
 					200: '#b3e7f2',
 					300: '#80d6e9',

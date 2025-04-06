@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
             scrolled || location.pathname !== '/' ? 'text-medical-700' : 'text-white'
           }`}
         >
-          Dr. Manolito
+          DUEÑAS
         </Link>
 
         {/* Desktop Menu */}

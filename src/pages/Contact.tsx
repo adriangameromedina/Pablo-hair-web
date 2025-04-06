@@ -1,7 +1,8 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Instagram, Phone, MessageCircle } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
+import { useLocation } from 'react-router-dom';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,14 @@ const Contact = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const location = useLocation();
+
+  // Scroll to top when navigating directly to this page with #top hash
+  useEffect(() => {
+    if (location.hash === '#top') {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -32,7 +41,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-20">
+    <div className="pt-20" id="top">
       {/* Hero Section */}
       <div className="bg-medical-700 text-white py-16">
         <div className="container mx-auto px-4 text-center">

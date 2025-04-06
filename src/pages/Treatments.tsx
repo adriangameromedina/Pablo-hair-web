@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface TreatmentCardProps {
   title: string;
@@ -16,7 +17,7 @@ const TreatmentCard: React.FC<TreatmentCardProps> = ({
 }) => {
   return (
     <div 
-      className="treatment-card bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300 animated-float"
+      className="treatment-card bg-[#FEF7E0] p-6 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
       onClick={onSelect}
     >
       <h3 className="text-xl font-bold mb-3 text-medical-700">{title}</h3>
@@ -265,11 +266,11 @@ const Treatments = () => {
       {/* Additional Information */}
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="section-title">Nuestro Enfoque</h2>
+          <h2 className="section-title">Mi Enfoque</h2>
           
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-center mb-12">
-              En nuestra clínica, creemos en un enfoque personalizado para cada paciente. Todos los tratamientos se adaptan a sus necesidades específicas y objetivos estéticos.
+              En mi práctica profesional, creo en un enfoque personalizado para cada paciente. Todos los tratamientos se adaptan a sus necesidades específicas y objetivos estéticos.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -281,7 +282,7 @@ const Treatments = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-medical-700">Seguridad</h3>
                 <p className="text-gray-600">
-                  Todos nuestros procedimientos cumplen con los más altos estándares de seguridad y calidad.
+                  Todos mis procedimientos cumplen con los más altos estándares de seguridad y calidad.
                 </p>
               </div>
               
@@ -293,7 +294,7 @@ const Treatments = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-medical-700">Innovación</h3>
                 <p className="text-gray-600">
-                  Utilizamos las técnicas y tecnologías más avanzadas en el campo del trasplante capilar.
+                  Utilizo las técnicas y tecnologías más avanzadas en el campo del trasplante capilar.
                 </p>
               </div>
               
@@ -318,11 +319,11 @@ const Treatments = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">¿Quiere saber qué tratamiento es el indicado para usted?</h2>
           <p className="mb-8 max-w-2xl mx-auto">
-            Contacte con nosotros para una consulta personalizada y sin compromiso.
+            Contacte conmigo para una consulta personalizada y sin compromiso.
           </p>
-          <a href="/contacto" className="btn-cta rounded-full">
+          <Link to="/contacto#top" className="btn-cta rounded-full">
             Reservar Consulta Gratuita
-          </a>
+          </Link>
         </div>
       </div>
     </div>

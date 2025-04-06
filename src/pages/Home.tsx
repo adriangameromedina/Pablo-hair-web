@@ -18,7 +18,7 @@ const Home = () => {
             <Link to="/contacto" className="btn-cta rounded-full transition-transform hover:scale-105">
               Consulta Gratuita
             </Link>
-            <Link to="/sobre-mi" className="btn-secondary rounded-full">
+            <Link to="/sobre-mi" className="btn-secondary rounded-full text-base px-5 py-3.5 whitespace-nowrap">
               Sobre Mí
             </Link>
           </div>

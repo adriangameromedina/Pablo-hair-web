@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				medical: {
+					100: '#e6f7fb',
+					200: '#b3e7f2',
+					300: '#80d6e9',
+					400: '#4dc6e0',
+					500: '#1ab6d7',
+					600: '#1592ac',
+					700: '#106d81',
+					800: '#0a4956',
+					900: '#05242b',
+				},
+				cta: {
+					DEFAULT: '#ff7e5f',
+					hover: '#ff6348',
+				},
+			},
+			backgroundImage: {
+				'hero-pattern': "url('/src/assets/hero-background.jpg')",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,26 +89,23 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' },
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' },
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

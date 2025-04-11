@@ -1,14 +1,23 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 const Home = () => {
   // Scroll to top when link is clicked
   const handleLinkClick = () => {
     window.scrollTo(0, 0);
   };
+
   return <div className="flex flex-col">
       {/* Hero Section */}
-      <div className="<img\n        src=\"https://smartclinic.doctor/wp-content/uploads/2022/03/Cicatrices-injerto-capilar.jpg\"\n />">
-        <div className="container mx-auto px-4 text-center text-white">
+      <div className="relative">
+        <div className="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+        <img 
+          src="https://smartclinic.doctor/wp-content/uploads/2022/03/Cicatrices-injerto-capilar.jpg"
+          alt="Hair transplant procedure" 
+          className="w-full h-[500px] object-cover"
+        />
+        <div className="container mx-auto px-4 text-center text-white absolute inset-0 flex flex-col items-center justify-center z-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in">
             Dr. Manolito
           </h1>
@@ -117,4 +126,5 @@ const Home = () => {
       </div>
     </div>;
 };
+
 export default Home;

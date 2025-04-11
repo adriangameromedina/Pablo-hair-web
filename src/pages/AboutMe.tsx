@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Star } from 'lucide-react';
 
 const AboutMe = () => {
   return (
@@ -167,6 +168,131 @@ const AboutMe = () => {
         </div>
       </div>
       
+      {/* Google Reviews Section - NUEVA SECCIÓN */}
+      <div className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="section-title">Valoraciones de Pacientes</h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h3 className="text-xl font-bold text-medical-700">Opiniones en Google</h3>
+                  <p className="text-gray-600">Valoración media de nuestros pacientes</p>
+                </div>
+                <div className="flex flex-col items-end">
+                  <div className="flex items-center">
+                    <span className="text-3xl font-bold text-medical-700 mr-2">4.9</span>
+                    <div className="flex">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star 
+                          key={star} 
+                          className={`h-6 w-6 ${star <= 5 ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} 
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  <span className="text-sm text-gray-500">Basado en 127 opiniones</span>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="flex justify-between items-start mb-2">
+                    <div>
+                      <h4 className="font-semibold">María G.</h4>
+                      <div className="flex">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star 
+                            key={star} 
+                            className="h-4 w-4 text-yellow-400 fill-yellow-400" 
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <span className="text-xs text-gray-500">Hace 2 meses</span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    "Excelente experiencia con el Dr. Manolito. Su profesionalidad y atención personalizada hicieron que me sintiera muy cómoda. Los resultados superaron mis expectativas."
+                  </p>
+                </div>
+                
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="flex justify-between items-start mb-2">
+                    <div>
+                      <h4 className="font-semibold">Carlos R.</h4>
+                      <div className="flex">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star 
+                            key={star} 
+                            className={`h-4 w-4 ${star <= 5 ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} 
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <span className="text-xs text-gray-500">Hace 1 mes</span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    "Después de investigar mucho, elegí al Dr. Manolito para mi trasplante capilar. El proceso fue mucho menos doloroso de lo que esperaba y los resultados son increíbles."
+                  </p>
+                </div>
+                
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="flex justify-between items-start mb-2">
+                    <div>
+                      <h4 className="font-semibold">Ana P.</h4>
+                      <div className="flex">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star 
+                            key={star} 
+                            className={`h-4 w-4 ${star <= 4 ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} 
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <span className="text-xs text-gray-500">Hace 3 meses</span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    "Acudí a consulta por problemas de caída de cabello. El doctor me explicó todas las opciones disponibles y me recomendó un tratamiento que ha funcionado muy bien."
+                  </p>
+                </div>
+                
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="flex justify-between items-start mb-2">
+                    <div>
+                      <h4 className="font-semibold">Jorge M.</h4>
+                      <div className="flex">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star 
+                            key={star} 
+                            className="h-4 w-4 text-yellow-400 fill-yellow-400" 
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <span className="text-xs text-gray-500">Hace 2 semanas</span>
+                  </div>
+                  <p className="text-gray-700 text-sm">
+                    "El mejor especialista en trasplante capilar. Su técnica es impecable y el seguimiento post-operatorio excelente. Muy satisfecho con todo el proceso."
+                  </p>
+                </div>
+              </div>
+              
+              <div className="mt-6 text-center">
+                <a 
+                  href="https://www.google.com/search?q=Dr+Manolito+reseñas" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-medical-600 text-white rounded-md hover:bg-medical-700 transition-colors"
+                >
+                  Ver todas las reseñas en Google
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       {/* Memberships */}
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
@@ -204,7 +330,7 @@ const AboutMe = () => {
           <p className="mb-8 max-w-2xl mx-auto">
             Pida cita para una consulta personalizada y descubra cómo podemos ayudarle con su caso específico.
           </p>
-          <a href="/contacto" className="btn-cta rounded-full">
+          <a href="/contacto" onClick={() => window.scrollTo(0, 0)} className="btn-cta rounded-full">
             Solicitar Consulta Gratuita
           </a>
         </div>

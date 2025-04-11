@@ -27,6 +27,11 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  // Función para manejar el scroll al inicio cuando se navega
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   const navItems = [
     { name: "Inicio", path: "/" },
     { name: "Injerto Capilar", path: "/injerto-capilar" },
@@ -47,6 +52,7 @@ const Navbar: React.FC = () => {
           className={`font-bold text-xl md:text-2xl ${
             scrolled || location.pathname !== '/' ? 'text-medical-700' : 'text-white'
           }`}
+          onClick={scrollToTop}
         >
           DUEÑAS
         </Link>
@@ -57,6 +63,7 @@ const Navbar: React.FC = () => {
             <Link
               key={item.name}
               to={item.path}
+              onClick={scrollToTop}
               className={`font-medium transition-colors duration-300 ${
                 location.pathname === item.path
                   ? scrolled || location.pathname !== '/'
@@ -91,7 +98,10 @@ const Navbar: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  scrollToTop();
+                }}
                 className={`font-medium ${
                   location.pathname === item.path
                     ? 'text-medical-600'

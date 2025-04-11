@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 import { Instagram, Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  // Función para manejar el scroll al inicio cuando se navega
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="bg-medical-800 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -31,19 +36,19 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-4">Enlaces</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="hover:text-medical-300 transition-colors">Inicio</Link>
+                <Link to="/" onClick={scrollToTop} className="hover:text-medical-300 transition-colors">Inicio</Link>
               </li>
               <li>
-                <Link to="/injerto-capilar" className="hover:text-medical-300 transition-colors">Injerto Capilar</Link>
+                <Link to="/injerto-capilar" onClick={scrollToTop} className="hover:text-medical-300 transition-colors">Injerto Capilar</Link>
               </li>
               <li>
-                <Link to="/tratamientos" className="hover:text-medical-300 transition-colors">Tratamientos</Link>
+                <Link to="/tratamientos" onClick={scrollToTop} className="hover:text-medical-300 transition-colors">Tratamientos</Link>
               </li>
               <li>
-                <Link to="/sobre-mi" className="hover:text-medical-300 transition-colors">Sobre Mí</Link>
+                <Link to="/sobre-mi" onClick={scrollToTop} className="hover:text-medical-300 transition-colors">Sobre Mí</Link>
               </li>
               <li>
-                <Link to="/contacto" className="hover:text-medical-300 transition-colors">Contacto</Link>
+                <Link to="/contacto" onClick={scrollToTop} className="hover:text-medical-300 transition-colors">Contacto</Link>
               </li>
             </ul>
           </div>
@@ -53,7 +58,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="mr-2 shrink-0 mt-1" size={18} />
-                <span>C/ Ejemplo 123, 28001 Madrid, España</span>
+                <span>C/ Hamlet 22, Málaga, España</span>
               </li>
               <li className="flex items-start">
                 <Phone className="mr-2 shrink-0 mt-1" size={18} />

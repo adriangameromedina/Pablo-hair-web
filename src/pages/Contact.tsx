@@ -13,11 +13,9 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const location = useLocation();
 
-  // Scroll to top when navigating directly to this page with #top hash
+  // Scroll to top when navigating directly to this page
   useEffect(() => {
-    if (location.hash === '#top') {
-      window.scrollTo(0, 0);
-    }
+    window.scrollTo(0, 0);
   }, [location]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -122,14 +120,18 @@ const Contact = () => {
               <div className="space-y-8">
                 <div className="bg-white p-6 rounded-lg shadow-md">
                   <h3 className="font-bold text-lg mb-2">Dirección</h3>
-                  <p className="text-gray-700 mb-4">C/ Ejemplo 123, 28001 Madrid, España</p>
+                  <p className="text-gray-700 mb-4">C/ Hamlet 22, Málaga, España</p>
                   <div className="aspect-w-16 aspect-h-9">
-                    <div className="w-full h-48 bg-gray-200 rounded-md">
-                      {/* Placeholder for map */}
-                      <div className="w-full h-full flex items-center justify-center text-gray-400">
-                        Mapa de ubicación
-                      </div>
-                    </div>
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.235379443897!2d-4.455548!3d36.719832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f7be196ff4c3%3A0x96b1c56cabc1a7cf!2sC.%20Hamlet%2C%2022%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1713016217893!5m2!1ses!2ses" 
+                      width="100%" 
+                      height="200" 
+                      style={{ border: 0 }} 
+                      allowFullScreen={true} 
+                      loading="lazy" 
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="rounded-md"
+                    ></iframe>
                   </div>
                 </div>
                 

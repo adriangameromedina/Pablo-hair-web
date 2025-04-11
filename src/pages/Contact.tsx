@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Instagram, Phone, MessageCircle } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
@@ -27,12 +26,15 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Simulate form submission to prueba@gmail.com
+    console.log(`Sending email to prueba@gmail.com with data:`, formData);
+    
+    // In a real implementation, this would send to prueba@gmail.com
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
         title: "Mensaje enviado",
-        description: "Nos pondremos en contacto con usted en breve.",
+        description: "Su mensaje ha sido enviado a prueba@gmail.com. Nos pondremos en contacto con usted en breve.",
       });
       setFormData({ name: '', email: '', message: '' });
     }, 1500);

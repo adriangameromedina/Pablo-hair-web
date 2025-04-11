@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
               <a href="#" className="hover:text-medical-300 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="hover:text-medical-300 transition-colors">
+              <a href="tel:+34600000000" className="hover:text-medical-300 transition-colors">
                 <Phone size={20} />
               </a>
               <a href="#" className="hover:text-medical-300 transition-colors">
@@ -61,8 +61,10 @@ const Footer: React.FC = () => {
                 <span>C/ Hamlet 22, Málaga, España</span>
               </li>
               <li className="flex items-start">
-                <Phone className="mr-2 shrink-0 mt-1" size={18} />
-                <span>+34 600 00 00 00</span>
+                <a href="tel:+34600000000" className="flex items-start hover:text-medical-300 transition-colors">
+                  <Phone className="mr-2 shrink-0 mt-1" size={18} />
+                  <span>+34 600 00 00 00</span>
+                </a>
               </li>
               <li className="flex items-start">
                 <Mail className="mr-2 shrink-0 mt-1" size={18} />

@@ -85,6 +85,7 @@ export default {
 			},
 			backgroundImage: {
 				'hero-pattern': "url('/src/assets/hero-background.jpg')",
+				'why-choose-us': "url('/src/assets/hair-transplant-bg.jpg')",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

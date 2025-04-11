@@ -3,6 +3,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  // Scroll to top when link is clicked
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -15,10 +20,10 @@ const Home = () => {
             Cirujano Capilar y Director médico de Clinica X
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-            <Link to="/contacto" className="btn-cta rounded-full transition-transform hover:scale-105">
+            <Link to="/contacto" className="btn-cta rounded-full transition-transform hover:scale-105" onClick={handleLinkClick}>
               Consulta Gratuita
             </Link>
-            <Link to="/sobre-mi" className="btn-secondary rounded-full text-base px-5 py-3.5 whitespace-nowrap">
+            <Link to="/sobre-mi" className="btn-secondary rounded-full text-base px-5 py-3.5 whitespace-nowrap" onClick={handleLinkClick}>
               Sobre Mí
             </Link>
           </div>
@@ -34,7 +39,7 @@ const Home = () => {
             <p className="text-gray-600 mb-4">
               Utilizamos las técnicas más avanzadas para ofrecerle un resultado natural y duradero.
             </p>
-            <Link to="/injerto-capilar" className="text-medical-600 font-medium hover:underline">
+            <Link to="/injerto-capilar" className="text-medical-600 font-medium hover:underline" onClick={handleLinkClick}>
               Saber más →
             </Link>
           </div>
@@ -44,7 +49,7 @@ const Home = () => {
             <p className="text-gray-600 mb-4">
               Ofrecemos diversos tratamientos adaptados a sus necesidades específicas.
             </p>
-            <Link to="/tratamientos" className="text-medical-600 font-medium hover:underline">
+            <Link to="/tratamientos" className="text-medical-600 font-medium hover:underline" onClick={handleLinkClick}>
               Saber más →
             </Link>
           </div>
@@ -54,7 +59,7 @@ const Home = () => {
             <p className="text-gray-600 mb-4">
               Evaluación detallada de su caso para determinar el mejor tratamiento posible.
             </p>
-            <Link to="/contacto" className="text-medical-600 font-medium hover:underline">
+            <Link to="/contacto" className="text-medical-600 font-medium hover:underline" onClick={handleLinkClick}>
               Contactar →
             </Link>
           </div>
@@ -62,40 +67,41 @@ const Home = () => {
       </div>
 
       {/* Why Choose Us */}
-      <div className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="section-title">¿Por qué elegirnos?</h2>
+      <div className="bg-gray-50 py-16 bg-why-choose-us bg-cover bg-center relative">
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div> {/* Overlay for better text readability */}
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="section-title text-white">¿Por qué elegirnos?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-medical-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-medical-700 font-bold text-2xl">15+</span>
               </div>
-              <h3 className="font-bold mb-2">Años de Experiencia</h3>
-              <p className="text-gray-600">Extensa trayectoria en cirugía capilar.</p>
+              <h3 className="font-bold mb-2 text-white">Años de Experiencia</h3>
+              <p className="text-gray-200">Extensa trayectoria en cirugía capilar.</p>
             </div>
             
             <div className="text-center">
               <div className="bg-medical-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-medical-700 font-bold text-2xl">2k+</span>
               </div>
-              <h3 className="font-bold mb-2">Pacientes Satisfechos</h3>
-              <p className="text-gray-600">Testimonios que avalan nuestra calidad.</p>
+              <h3 className="font-bold mb-2 text-white">Pacientes Satisfechos</h3>
+              <p className="text-gray-200">Testimonios que avalan nuestra calidad.</p>
             </div>
             
             <div className="text-center">
               <div className="bg-medical-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-medical-700 font-bold text-2xl">100%</span>
               </div>
-              <h3 className="font-bold mb-2">Tecnología Avanzada</h3>
-              <p className="text-gray-600">Equipamiento de última generación.</p>
+              <h3 className="font-bold mb-2 text-white">Tecnología Avanzada</h3>
+              <p className="text-gray-200">Equipamiento de última generación.</p>
             </div>
             
             <div className="text-center">
               <div className="bg-medical-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-medical-700 font-bold text-2xl">24/7</span>
               </div>
-              <h3 className="font-bold mb-2">Atención Continua</h3>
-              <p className="text-gray-600">Seguimiento post-operatorio personalizado.</p>
+              <h3 className="font-bold mb-2 text-white">Atención Continua</h3>
+              <p className="text-gray-200">Seguimiento post-operatorio personalizado.</p>
             </div>
           </div>
         </div>
@@ -108,7 +114,7 @@ const Home = () => {
           <p className="mb-8 max-w-2xl mx-auto">
             Agenda una consulta gratuita y descubre cómo podemos ayudarte a conseguir el resultado que deseas.
           </p>
-          <Link to="/contacto" className="btn-cta rounded-full">
+          <Link to="/contacto" className="btn-cta rounded-full" onClick={handleLinkClick}>
             Reservar Consulta
           </Link>
         </div>

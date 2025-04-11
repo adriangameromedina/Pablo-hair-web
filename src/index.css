@@ -54,6 +54,13 @@
     background-repeat: no-repeat;
   }
 
+  .bg-why-choose-us {
+    background-image: url('/src/assets/hair-transplant-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   .treatment-card {
     transition: all 0.3s ease;
   }
